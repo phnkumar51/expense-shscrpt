@@ -1,31 +1,31 @@
-echo disable previous version of nodejs
+echo -e"\e[33m disable previous version of nodejs\e[0m"
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
 
-echo install the latest version of nodejs
+echo -e"\e[33m install the latest version of nodejs\e[0m"
 dnf install nodejs -y
 
-echo configure the backend file
+echo -e"\e[33m configure the backend file\e[0m"
 cp backend.service /etc/systemd/system/backend.service
 
-echo add user
+echo -e"\e[33m add user\e[0m"
 useradd expense
 
-echo remove directory
+echo -e"\e[33m remove directory\e[0m"
 rm -rf /app
 
-echo add directory
+echo -e"\e[33m add directory\e[0m"
 mkdir /app
 
-echo download the content
+echo -e"\e[33m download the content\e[0m"
 curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip
 cd /app
 
-echo unzip the content
+echo -e"\e[33m unzip the content\e[0m"
 unzip /tmp/backend.zip
 npm install
 
-echo restart the webserver
+echo -e"\e[33m restart the webserver\e[0m"
 systemctl daemon-reload
 systemctl enable backend
 systemctl restart backend

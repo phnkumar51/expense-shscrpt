@@ -9,3 +9,7 @@ SyslogIdentifier=backend
 
 [Install]
 WantedBy=multi-user.target
+
+# color codes
+# Red(31), Green(32), Yellow(33), Blue(34), Magneta(45), Cyca(46)
+# Syntax for color code -> echo -e "\e[COLCODEmMessage\e[0m"
