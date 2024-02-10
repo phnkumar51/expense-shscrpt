@@ -1,3 +1,5 @@
+
+mysql_password=$1
 log_file=$log_file
 
 echo -e "\e[31m disable previous version of nodejs\e[0m"
@@ -33,4 +35,4 @@ systemctl enable backend &>$log_file
 systemctl restart backend &>$log_file
 
 dnf install mysql -y &>$log_file
-mysql -h mysql-dev.bdevops.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>$log_file
+mysql -h mysql-dev.bdevops.online -uroot -p${mysql_password} < /app/schema/backend.sql &>$log_file
