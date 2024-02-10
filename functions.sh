@@ -2,3 +2,4 @@
 system() {
   echo "Hello wrold"
 }
+system
