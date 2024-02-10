@@ -6,4 +6,4 @@ system() {
   #echo "Rampage"
 #}#
 # shellcheck disable=SC1073
-system()
+system
