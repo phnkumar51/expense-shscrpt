@@ -2,4 +2,6 @@
 system() {
   echo "Hello wrold"
 }
-system
+system1(){
+  echo "Rampage"
+}
