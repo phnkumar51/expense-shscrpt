@@ -2,5 +2,5 @@
 echo print the script $0
 echo abc $1
 echo 123$2
-echo $*
-echo $#
+echo All Arguments $*
+echo Number of Arguments $#
