@@ -1,2 +1,2 @@
 # Special Variables 0,1,2,3.....n
-echo $0
+echo print the script $0
